@@ -20,7 +20,7 @@ void print_list(struct list *head)
         
         while (ptr != NULL)
         {
-            printf("Student name: %s\n", ptr->name);
+            printf("\nStudent name: %s\n", ptr->name);
             printf("Student age: %d\n", ptr->age);
             printf("================\n");
             count++;
@@ -113,6 +113,12 @@ void add_at_pos(struct list *head, char *new_name, int new_age, int pos)
         temp->name = new_name;
         temp->age = new_age;
         temp->next = NULL;
+
+        if (pos == 2)
+            {
+                temp->next = ptr->next;
+                ptr->next = temp;
+            }
         
         while (ptr != NULL)
         {
@@ -125,6 +131,6 @@ void add_at_pos(struct list *head, char *new_name, int new_age, int pos)
                 continue;
             }
         }
-        printf("\n%s has been added successfully\n", new_name);
+        printf("\n%s has been added successfully at position %d\n", new_name, pos);
     }
 }

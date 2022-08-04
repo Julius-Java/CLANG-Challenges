@@ -1,8 +1,10 @@
-#define SINGLELINK_H
-#ifndef SINGLELINK_H
+#ifndef MAIN_H
+#define MAIN_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stddef.h>
 
 // Data structure for the linked-list
 struct list 

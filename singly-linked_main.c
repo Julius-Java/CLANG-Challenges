@@ -1,7 +1,6 @@
 #include "singly-linked_list.h"
 
 int main() {
-    // Write C code here
     struct list *head;
     
     head = malloc(sizeof(struct list));
@@ -16,7 +15,15 @@ int main() {
     
     add_at_pos(head, "Jimmy", 22, 3);
 
-    add_at_pos(head, "Alfred", 22, 1);
+    add_at_pos(head, "John", 22, 4);
+
+    add_at_pos(head, "Mike", 14, 5);
+
+    add_at_pos(head, "Joseph", 16, 2);
+
+    add_at_pos(head, "Joshua", 27, 7);
+
+    add_at_pos(head, "Job", 19, 7);
     
     print_list(head);
 
